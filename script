@@ -1,0 +1,289 @@
+-- Gui to Lua
+-- Version: 3.6
+
+-- Instances:
+
+local QoLGui = Instance.new("ScreenGui")
+local RetroObbySign = Instance.new("TextButton")
+local AddedParts = Instance.new("Folder")
+
+-- Properties:
+
+QoLGui.Name = "QoLGui"
+QoLGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+QoLGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+RetroObbySign.Name = "RetroObbySign"
+RetroObbySign.Parent = QoLGui
+RetroObbySign.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RetroObbySign.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RetroObbySign.BorderSizePixel = 0
+RetroObbySign.Position = UDim2.new(0.344916344, 0, 0.21400778, 0)
+RetroObbySign.Size = UDim2.new(0, 240, 0, 131)
+RetroObbySign.Font = Enum.Font.SourceSans
+RetroObbySign.TextColor3 = Color3.fromRGB(0, 0, 0)
+RetroObbySign.TextSize = 14.000
+
+AddedParts.Name = "AddedParts"
+AddedParts.Parent = QoLGui
+
+-- Scripts:
+
+local function XKCNT_fake_script() -- RetroObbySign.Click 
+	local script = Instance.new('LocalScript', RetroObbySign)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		
+		local player = game.Players.LocalPlayer
+		player.Character.HumanoidRootPart.CFrame = CFrame.new(-16872.8574, -6.10000229, 4774.94336, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+		
+	end)
+end
+coroutine.wrap(XKCNT_fake_script)()
+local function BIKME_fake_script() -- RetroObbySign.Render 
+	local script = Instance.new('LocalScript', RetroObbySign)
+
+	local RunService = game:GetService("RunService")
+	local Players = game.Players.LocalPlayer
+	
+	local ScreenGui = game.StarterGui.QoLGui
+	local Sign = script.Parent
+	
+	RunService.Heartbeat:Connect(function()
+		local Camera = game.Workspace.Camera
+	
+		local part = game.Workspace:WaitForChild("BeefsQoL").RetroSign:WaitForChild("Text")
+		local camera = workspace.CurrentCamera
+		local worldPoint = part.Position
+		local vector, isOnScreen = camera:WorldToScreenPoint(worldPoint)
+	
+		local screenPoint = UDim2.new(0, vector.X, 0, vector.Y)
+		local depth = vector.Z
+	
+		Sign.Size = UDim2.new(0,30,0,30)
+		Sign.Position = screenPoint
+		
+		if isOnScreen then
+			Sign.Visible = true
+		else 
+			Sign.Visible = false
+		end
+	end)
+	
+end
+coroutine.wrap(BIKME_fake_script)()
+local function KWWPTF_fake_script() -- AddedParts.RetroSign1 
+	local script = Instance.new('LocalScript', AddedParts)
+
+		local RetroSign = Instance.new("Model") 
+		local Part1 = Instance.new("Part") 
+		local Part = Instance.new("Part") 
+		local Text = Instance.new("Part") 
+		local player = Instance.new("StringValue") 
+		local SurfaceGui = Instance.new("SurfaceGui") 
+		local TextLabel = Instance.new("TextLabel") 
+		RetroSign.Archivable = true 
+		RetroSign.Name = "RetroSign" 
+		RetroSign.Parent = game.Workspace:WaitForChild("BeefsQoL") 
+		RetroSign.PrimaryPart = nil 
+		Part1.Anchored = true 
+		Part1.Archivable = true 
+		Part1.BackParamA = 0 
+		Part1.BackParamB = 0 
+		Part1.BackSurface = Enum.SurfaceType.Smooth 
+		Part1.BackSurfaceInput = Enum.InputType.NoInput 
+		Part1.BottomParamA = -0 
+		Part1.BottomParamB = -4.652535468487489e+22 
+		Part1.BottomSurface = Enum.SurfaceType.Inlet 
+		Part1.BottomSurfaceInput = Enum.InputType.NoInput 
+		Part1.BrickColor = BrickColor.new("Reddish brown") 
+		Part1.CFrame = CFrame.new(-252.7938995361328, 318.9548034667969, -16.85657501220703)*CFrame.Angles(-0.6505522727966309, -0, 0.759461522102356) 
+		Part1.CanCollide = false 
+		Part1.CollisionGroupId = "0" 
+		Part1.Color = Color3.new(0.411765, 0.25098, 0.156863) 
+		Part1.FrontParamA = 0 
+		Part1.FrontParamB = 0 
+		Part1.FrontSurface = Enum.SurfaceType.Smooth 
+		Part1.FrontSurfaceInput = Enum.InputType.NoInput 
+		Part1.LeftParamA = 0 
+		Part1.LeftParamB = 0 
+		Part1.LeftSurface = Enum.SurfaceType.Smooth 
+		Part1.LeftSurfaceInput = Enum.InputType.NoInput 
+		Part1.Locked = false 
+		Part1.Material = Enum.Material.WoodPlanks 
+		Part1.Name = "Part1" 
+		Part1.Orientation = Vector3.new(0, 139.41700744628906, 0) 
+		Part1.Parent = RetroSign 
+		Part1.Position = Vector3.new(-252.7938995361328, 318.9548034667969, -16.85657501220703) 
+		Part1.Reflectance = 0 
+		Part1.RightParamA = 0 
+		Part1.RightParamB = 0 
+		Part1.RightSurface = Enum.SurfaceType.Smooth 
+		Part1.RightSurfaceInput = Enum.InputType.NoInput 
+		Part1.RotVelocity = Vector3.new(0, 0, 0) 
+		Part1.Rotation = Vector3.new(180, 40.58300018310547, 180) 
+		Part1.Shape = Enum.PartType.Block 
+		Part1.Size = Vector3.new(0.2751010060310364, 3.301213026046753, 0.13755099475383759) 
+		Part1.TopParamA = 0 
+		Part1.TopParamB = 0 
+		Part1.TopSurface = Enum.SurfaceType.Studs 
+		Part1.TopSurfaceInput = Enum.InputType.NoInput 
+		Part1.Transparency = 0 
+		Part1.Velocity = Vector3.new(0, 0, 0) 
+		Part.Anchored = true 
+		Part.Archivable = true 
+		Part.BackParamA = 0 
+		Part.BackParamB = 0 
+		Part.BackSurface = Enum.SurfaceType.Smooth 
+		Part.BackSurfaceInput = Enum.InputType.NoInput 
+		Part.BottomParamA = -0 
+		Part.BottomParamB = -4.652535468487489e+22 
+		Part.BottomSurface = Enum.SurfaceType.Inlet 
+		Part.BottomSurfaceInput = Enum.InputType.NoInput 
+		Part.BrickColor = BrickColor.new("Reddish brown") 
+		Part.CFrame = CFrame.new(-252.88348388671875, 319.7115173339844, -16.752172470092773)*CFrame.Angles(-0.6505522727966309, -0, 0.759461522102356) 
+		Part.CanCollide = false 
+		Part.CollisionGroupId = "0" 
+		Part.Color = Color3.new(0.411765, 0.25098, 0.156863) 
+		Part.FrontParamA = 0 
+		Part.FrontParamB = 0 
+		Part.FrontSurface = Enum.SurfaceType.Smooth 
+		Part.FrontSurfaceInput = Enum.InputType.NoInput 
+		Part.LeftParamA = 0 
+		Part.LeftParamB = 0 
+		Part.LeftSurface = Enum.SurfaceType.Smooth 
+		Part.LeftSurfaceInput = Enum.InputType.NoInput 
+		Part.Locked = false 
+		Part.Material = Enum.Material.WoodPlanks 
+		Part.Name = "Part" 
+		Part.Orientation = Vector3.new(0, 139.41700744628906, 0) 
+		Part.Parent = RetroSign 
+		Part.Position = Vector3.new(-252.88348388671875, 319.7115173339844, -16.752172470092773) 
+		Part.Reflectance = 0 
+		Part.RightParamA = 0 
+		Part.RightParamB = 0 
+		Part.RightSurface = Enum.SurfaceType.Smooth 
+		Part.RightSurfaceInput = Enum.InputType.NoInput 
+		Part.RotVelocity = Vector3.new(0, 0, 0) 
+		Part.Rotation = Vector3.new(180, 40.58300018310547, 180) 
+		Part.Shape = Enum.PartType.Block 
+		Part.Size = Vector3.new(2.751009941101074, 1.5130560398101807, 0.13755099475383759) 
+		Part.TopParamA = 0 
+		Part.TopParamB = 0 
+		Part.TopSurface = Enum.SurfaceType.Studs 
+		Part.TopSurfaceInput = Enum.InputType.NoInput 
+		Part.Transparency = 0 
+		Part.Velocity = Vector3.new(0, 0, 0) 
+		Text.Anchored = true 
+		Text.Archivable = true 
+		Text.BackParamA = 0 
+		Text.BackParamB = 0 
+		Text.BackSurface = Enum.SurfaceType.Smooth 
+		Text.BackSurfaceInput = Enum.InputType.NoInput 
+		Text.BottomParamA = -0 
+		Text.BottomParamB = -4.652535468487489e+22 
+		Text.BottomSurface = Enum.SurfaceType.Inlet 
+		Text.BottomSurfaceInput = Enum.InputType.NoInput 
+		Text.BrickColor = BrickColor.new("Reddish brown") 
+		Text.CFrame = CFrame.new(-252.96499633789062, 319.7147521972656, -16.640884399414062)*CFrame.Angles(-0.6505522727966309, -0, 0.759461522102356) 
+		Text.CanCollide = false 
+		Text.CollisionGroupId = "0" 
+		Text.Color = Color3.new(0.411765, 0.25098, 0.156863) 
+		Text.FrontParamA = 0 
+		Text.FrontParamB = 0 
+		Text.FrontSurface = Enum.SurfaceType.SmoothNoOutlines 
+		Text.FrontSurfaceInput = Enum.InputType.NoInput 
+		Text.LeftParamA = 0 
+		Text.LeftParamB = 0 
+		Text.LeftSurface = Enum.SurfaceType.Smooth 
+		Text.LeftSurfaceInput = Enum.InputType.NoInput 
+		Text.Locked = false 
+		Text.Material = Enum.Material.WoodPlanks 
+		Text.Name = "Text" 
+		Text.Orientation = Vector3.new(0, 139.41700744628906, 0) 
+		Text.Parent = RetroSign 
+		Text.Position = Vector3.new(-252.96499633789062, 319.7147521972656, -16.640884399414062) 
+		Text.Reflectance = 0 
+		Text.RightParamA = 0 
+		Text.RightParamB = 0 
+		Text.RightSurface = Enum.SurfaceType.Smooth 
+		Text.RightSurfaceInput = Enum.InputType.NoInput 
+		Text.RotVelocity = Vector3.new(0, 0, 0) 
+		Text.Rotation = Vector3.new(180, 40.58300018310547, 180) 
+		Text.Shape = Enum.PartType.Block 
+		Text.Size = Vector3.new(2.7303779125213623, 1.5199329853057861, 0.13755099475383759) 
+		Text.TopParamA = 0 
+		Text.TopParamB = 0 
+		Text.TopSurface = Enum.SurfaceType.Studs 
+		Text.TopSurfaceInput = Enum.InputType.NoInput 
+		Text.Transparency = 0 
+		Text.Velocity = Vector3.new(0, 0, 0) 
+		player.Archivable = true 
+		player.Name = "player" 
+		player.Parent = RetroSign 
+		player.Value = "TheReal_Catalcysm" 
+		SurfaceGui.Active = true 
+		SurfaceGui.Adornee = nil 
+		SurfaceGui.AlwaysOnTop = false 
+		SurfaceGui.Archivable = true 
+		SurfaceGui.AutoLocalize = true 
+		SurfaceGui.CanvasSize = Vector2.new(200, 100) 
+		SurfaceGui.ClipsDescendants = false 
+		SurfaceGui.Enabled = true 
+		SurfaceGui.Face = Enum.NormalId.Front 
+		SurfaceGui.LightInfluence = 0 
+		SurfaceGui.Name = "SurfaceGui" 
+		SurfaceGui.Parent = Text 
+		SurfaceGui.ResetOnSpawn = true 
+		SurfaceGui.RootLocalizationTable = nil 
+		SurfaceGui.ToolPunchThroughDistance = 0 
+		SurfaceGui.ZIndexBehavior = Enum.ZIndexBehavior.Global 
+		SurfaceGui.ZOffset = 0 
+		TextLabel.Active = true 
+		TextLabel.AnchorPoint = Vector2.new(0, 0) 
+		TextLabel.Archivable = true 
+		TextLabel.AutoLocalize = true 
+		TextLabel.BackgroundColor3 = Color3.new(1, 1, 1) 
+		TextLabel.BackgroundTransparency = 1 
+		TextLabel.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843) 
+		TextLabel.BorderSizePixel = 1 
+		TextLabel.ClipsDescendants = false 
+		TextLabel.Font = Enum.Font.Unknown 
+		TextLabel.LayoutOrder = 0 
+		TextLabel.LineHeight = 1 
+		TextLabel.Name = "TextLabel" 
+		TextLabel.NextSelectionDown = nil 
+		TextLabel.NextSelectionLeft = nil 
+		TextLabel.NextSelectionRight = nil 
+		TextLabel.NextSelectionUp = nil 
+		TextLabel.Parent = SurfaceGui 
+		TextLabel.Position = UDim2.new(0,0,0,0)  
+		TextLabel.RootLocalizationTable = nil 
+		TextLabel.Rotation = 0 
+		TextLabel.Selectable = false 
+		TextLabel.SelectionImageObject = nil 
+		TextLabel.Size = UDim2.new(1,0,1,0) 
+		TextLabel.SizeConstraint = Enum.SizeConstraint.RelativeXY 
+		TextLabel.Text = "CLICK THIS SIGN TO GO TO RETRO OBBY" 
+		TextLabel.TextColor3 = Color3.new(1, 1, 1) 
+		TextLabel.TextScaled = true 
+		TextLabel.TextSize = 12 
+		TextLabel.TextStrokeColor3 = Color3.new(0, 0.011765, 0) 
+		TextLabel.TextStrokeTransparency = 0 
+		TextLabel.TextTransparency = 0 
+		TextLabel.TextTruncate = Enum.TextTruncate.None 
+		TextLabel.TextWrapped = true 
+		TextLabel.TextXAlignment = Enum.TextXAlignment.Center 
+		TextLabel.TextYAlignment = Enum.TextYAlignment.Center 
+		TextLabel.Visible = true 
+		TextLabel.ZIndex = 1
+end
+coroutine.wrap(KWWPTF_fake_script)()
+local function DUFYR_fake_script() -- AddedParts.Folder 
+	local script = Instance.new('LocalScript', AddedParts)
+
+	local folder = Instance.new("Folder")
+	folder.Name = "BeefsQoL"
+	folder.Parent = game.Workspace
+end
+coroutine.wrap(DUFYR_fake_script)()
