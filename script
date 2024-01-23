@@ -264,7 +264,7 @@ local function BIKME_fake_script() -- RetroObbySign.Render
 	local Players = game.Players.LocalPlayer
 
 	local ScreenGui = game.StarterGui.QoLGui
-	local Sign = script.Parent
+	local Sign = QoLGui.RetroObbySign
 
 	RunService.Heartbeat:Connect(function()
 		local Camera = game.Workspace.Camera
